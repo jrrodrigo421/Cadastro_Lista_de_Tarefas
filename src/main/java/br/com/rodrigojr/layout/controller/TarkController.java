@@ -2,13 +2,11 @@ package br.com.rodrigojr.layout.controller;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.ModelAndView;
-
 import br.com.rodrigojr.layout.model.Task;
 
 @Controller
@@ -53,6 +51,7 @@ public class TarkController {
     Task taskFind = tasks.stream().filter(task -> id.equals(task.getId())).findFirst().get();
     mv.addObject("task", taskFind);
     return mv;
+
   }
 
 }
